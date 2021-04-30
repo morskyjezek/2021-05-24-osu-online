@@ -1,23 +1,23 @@
 ---
-layout: workshop      # DON'T CHANGE THIS.
+layout: workshop # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "Ohio State University"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "online"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "USA"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the
-latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "May 24-25 & 27-28, 2021"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "1:00 pm - 4:30 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: 2021-05-24      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2021-05-28        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Jesse Johnston", "Oscar David Arbelaez"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["TBA"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["morskyjezek@gmail.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:  https://pad.carpentries.org/2021-05-24-osu-online # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+venue: "Ohio State University" # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
+address: "online" # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+country: "USA" # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
+language: "en" # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the
+latitude: "45" # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "-1" # decimal longitude of the workshop venue (use https://www.latlong.net)
+humandate: "May 24-25 & 27-28, 2021" # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "1:00 pm - 4:30 pm" # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2021-05-24 # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2021-05-28 # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Jesse Johnston", "Oscar David Arbeláez"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["TBA"] # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["morskyjezek@gmail.com", "oscar@arbelaez.org"] # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+collaborative_notes: https://pad.carpentries.org/2021-05-24-osu-online # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
+eventbrite: # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -28,13 +28,11 @@ HEADER
 Edit the values in the block above to be appropriate for your workshop.
 If the value is not 'true', 'false', 'null', or a number, please use
 double quotation marks around the value, unless specified otherwise.
-And run 'make workshop-check' *before* committing to make sure that changes are good.
+And run 'make workshop-check' _before_ committing to make sure that changes are good.
 {% endcomment %}
-
 
 {% comment %}
 {% endcomment %}
-
 
 {% comment %}
 Check DC curriculum
@@ -42,6 +40,7 @@ Check DC curriculum
 
 {% if site.carpentry == "dc" %}
 {% unless site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-socsci" or site.curriculum == "dc-geospatial" %}
+
 <div class="alert alert-warning">
 It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
 </div>
@@ -54,6 +53,7 @@ Check SWC curriculum
 
 {% if site.carpentry == "swc" %}
 {% unless site.curriculum == "swc-inflammation" or site.curriculum == "swc-gapminder" %}
+
 <div class="alert alert-warning">
 It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
 </div>
@@ -64,13 +64,14 @@ It looks like you are setting up a website for a Software Carpentry curriculum b
 EVENTBRITE
 
 This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
+'eventbrite' has been set in the header. You can delete it if you
 are not using Eventbrite, or leave it in, since it will not be
 displayed if the 'eventbrite' field in the header is not set.
 {% endcomment %}
 {% if page.eventbrite %}
 <strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
+registration box below, please check your adblocker settings.</strong>
+
 <iframe
   src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
   frameborder="0"
@@ -79,7 +80,6 @@ displayed if the 'eventbrite' field in the header is not set.
   scrolling="auto">
 </iframe>
 {% endif %}
-
 
 <h2 id="general">General Information</h2>
 
@@ -100,7 +100,7 @@ the pitch.
 {% comment %}
 AUDIENCE
 
-Explain who your audience is.  (In particular, tell readers if the
+Explain who your audience is. (In particular, tell readers if the
 workshop is only open to people from a particular institution.
 {% endcomment %}
 {% if site.carpentry == "swc" %}
@@ -115,7 +115,7 @@ workshop is only open to people from a particular institution.
 LOCATION
 
 This block displays the address and links to maps showing directions
-if the latitude and longitude of the workshop have been set.  You
+if the latitude and longitude of the workshop have been set. You
 can use https://itouchmap.com/latlong.html to find the lat/long of an
 address.
 {% endcomment %}
@@ -128,6 +128,7 @@ address.
 {% assign online = "false" %}
 {% endif %}
 {% if page.latitude and page.longitude and online == "false" %}
+
 <p id="where">
   <strong>Where:</strong>
   {{page.address}}.
@@ -156,6 +157,7 @@ DATE
 This block displays the date and links to Google Calendar.
 {% endcomment %}
 {% if page.humandate %}
+
 <p id="when">
   <strong>When:</strong>
   {{page.humandate}}.
@@ -168,6 +170,7 @@ SPECIAL REQUIREMENTS
 
 Modify the block below if there are any special requirements.
 {% endcomment %}
+
 <p id="requirements">
   <strong>Requirements:</strong>
   {% if online == "false" %}
@@ -186,6 +189,7 @@ ACCESSIBILITY
 Modify the block below if there are any barriers to accessibility or
 special instructions.
 {% endcomment %}
+
 <p id="accessibility">
   <strong>Accessibility:</strong>
 {% if online == "false" %}
@@ -216,6 +220,7 @@ CONTACT EMAIL ADDRESS
 
 Display the contact email address set in the configuration file.
 {% endcomment %}
+
 <p id="contact">
   <strong>Contact:</strong>
   Please email
@@ -249,9 +254,11 @@ If you would like to specify who can attend the workshop,
 you can use the section below.
 
 Move the 'endcomment' tag above the beginning of the following
+
 <p> tag to make this section visible.
 
 Edit the text to match who can attend the workshop. For instance:
+
 - This workshop is open to affiliates to ABC university.
 - This workshop is open to the public.
 - If you are interested in attending this workshop, contact me@example.com
@@ -268,6 +275,7 @@ Edit the text to match who can attend the workshop. For instance:
 {% comment%}
 CODE OF CONDUCT
 {% endcomment %}
+
 <h2 id="code-of-conduct">Code of Conduct</h2>
 
 <p>
@@ -280,7 +288,6 @@ Everyone who participates in Carpentries activities is required to conform to th
   </a>
 </p>
 <hr/>
-
 
 {% comment %}
 Collaborative Notes
@@ -296,6 +303,7 @@ Note we also have a CodiMD (the open-source version of HackMD)
 available at https://codimd.carpentries.org
 {% endcomment %}
 {% if page.collaborative_notes %}
+
 <h2 id="collaborative_notes">Collaborative Notes</h2>
 
 <p>
@@ -304,10 +312,10 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 <hr/>
 {% endif %}
 
-
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
 {% endcomment %}
+
 <h2 id="surveys">Surveys</h2>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 {% if site.carpentry == "pilot" %}
@@ -328,7 +336,6 @@ change the value of `carpentry` to `pilot`.
 {% endif %}
 
 <hr/>
-
 
 {% comment %}
 SCHEDULE
@@ -364,18 +371,17 @@ of code below the Schedule `<h2>` header below with
 The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. If you would like to know the timing of these breaks in advance, please [contact the workshop organisers](#contact). For a list of lesson sections and estimated timings, [visit the lesson homepage]({{ site.lesson_site }}).
 {% comment %}
 Edit/replace the text above if you want to include a schedule table.
-See the contents of the _includes/custom_schedule.html file for an example of
+See the contents of the \_includes/custom_schedule.html file for an example of
 how one of these schedule tables is constructed.
 {% endcomment %}
 {% endif %}
 
 <hr/>
 
-
 {% comment %}
 SETUP
 
-Delete irrelevant sections from the setup instructions.  Each
+Delete irrelevant sections from the setup instructions. Each
 section is inside a 'div' without any classes to make the beginning
 and end easier to find.
 
@@ -407,6 +413,7 @@ please preview your site before committing, and make sure to run
 
 {% comment %}
 For online workshops, the section below provides:
+
 - installation instructions for the Zoom client
 - recommendations for setting up Learners' workspace so they can follow along
   the instructions and the videoconferencing
