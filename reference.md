@@ -3,9 +3,10 @@ layout: reference
 title: Reference
 ---
 
-## Shell Cheat Sheet
+## Shell Basics Cheat Sheet
+
 **[Source](https://librarycarpentry.org/lc-shell/reference)**
-_____
+
 ### Shell: Navigation Basics
 
 **`pwd`** - print working directory
@@ -28,7 +29,7 @@ _____
   
   `cd ..` - takes you up one directory
 
-______
+
 ### Shell: Interacting with Files
 
 **`mkdir`** make a directory
